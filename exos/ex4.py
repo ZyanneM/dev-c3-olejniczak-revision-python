@@ -8,6 +8,11 @@ def numberList():
         if num > largest_number:
             largest_number = num
     print("Le plus grand nombre de la liste est : ", largest_number)
+    littlest_number = random_numbers[0]
+    for num in random_numbers:
+        if num < littlest_number:
+            littlest_number = num
+    print("Le plus petit nombre de la liste est : ", littlest_number)
 
 
 numberList()
