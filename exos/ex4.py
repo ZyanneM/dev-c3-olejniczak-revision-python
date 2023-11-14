@@ -13,6 +13,12 @@ def numberList():
         if num < littlest_number:
             littlest_number = num
     print("Le plus petit nombre de la liste est : ", littlest_number)
+    average = 0
+    sum = 0
+    for num in random_numbers:
+        sum += num
+        average = sum / len(random_numbers)
+    print("La moyenne des nombres de la liste est : ", average)
 
 
 numberList()
