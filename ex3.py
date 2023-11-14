@@ -27,7 +27,12 @@ def Calculator(str):
             else:
                 break
 
-        if len(numbers) == 3 and len(operators) == 2:
+        if len(numbers) == 4 and len(operators) == 3:
+            firstOperation = handleOperation(numbers[0], operators[0], numbers[1])
+            secondOperation = handleOperation(firstOperation, operators[1], numbers[2])
+            thirdOperation = handleOperation(secondOperation, operators[2], numbers[3])
+            print("Le résultat de l'opération est : ", thirdOperation)
+        elif len(numbers) == 3 and len(operators) == 2:
             firstOperation = handleOperation(numbers[0], operators[0], numbers[1])
             secondOperation = handleOperation(firstOperation, operators[1], numbers[2])
             print("Le résultat de l'opération est : ", secondOperation)
@@ -39,4 +44,10 @@ def Calculator(str):
     else:
         print("Votre opération n'est pas valide")
 
-Calculator("100x2+5")
+Calculator("100x2+5-3")
+
+
+
+
+
+
